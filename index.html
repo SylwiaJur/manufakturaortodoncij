@@ -14,13 +14,13 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background-color: #f8f9fa;
+            color: #2c3e50;
+            background-color: #ffffff;
         }
 
         /* Header & Navigation */
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #2c3e50;
             color: white;
             padding: 1rem 0;
             position: fixed;
@@ -42,6 +42,7 @@
         .logo-text {
             font-size: 1.5rem;
             font-weight: bold;
+            letter-spacing: 1px;
         }
 
         nav ul {
@@ -54,38 +55,34 @@
             color: white;
             text-decoration: none;
             font-weight: 500;
-            transition: opacity 0.3s;
+            transition: color 0.3s;
         }
 
         nav a:hover {
-            opacity: 0.8;
+            color: #95a5a6;
         }
 
         /* Hero Section with Slider */
         .hero {
-            margin-top: 80px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 4rem 2rem;
+            margin-top: 70px;
+            background: linear-gradient(135deg, #ecf0f1 0%, #bdc3c7 100%);
+            color: #2c3e50;
+            padding: 3rem 2rem 2rem;
             text-align: center;
-            position: relative;
-            overflow: hidden;
         }
 
         .hero-content {
             max-width: 1200px;
             margin: 0 auto;
-            position: relative;
-            z-index: 2;
         }
 
         .logo-container {
-            max-width: 280px;
-            margin: 0 auto 2rem;
+            max-width: 250px;
+            margin: 0 auto 1.5rem;
             background: white;
             padding: 1.5rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
         }
 
         .logo-container img {
@@ -96,22 +93,26 @@
         .hero h1 {
             font-size: 2.2rem;
             margin-bottom: 0.5rem;
+            color: #2c3e50;
+            font-weight: 300;
+            letter-spacing: 2px;
         }
 
         .hero .subtitle {
-            font-size: 1.1rem;
-            opacity: 0.95;
-            margin-bottom: 2rem;
+            font-size: 1rem;
+            color: #34495e;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
         }
 
-        /* Image Slider */
+        /* Image Slider - Più compatto */
         .slider-container {
-            max-width: 900px;
-            margin: 2rem auto;
+            max-width: 800px;
+            margin: 1.5rem auto;
             position: relative;
-            border-radius: 15px;
+            border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
             background: white;
         }
 
@@ -126,14 +127,14 @@
             justify-content: center;
             align-items: center;
             background: white;
-            padding: 2rem;
+            padding: 1rem;
         }
 
         .slide img {
             max-width: 100%;
-            max-height: 400px;
+            max-height: 350px;
             object-fit: contain;
-            border-radius: 10px;
+            border-radius: 8px;
         }
 
         /* Slider Navigation Dots */
@@ -141,97 +142,104 @@
             display: flex;
             justify-content: center;
             gap: 0.5rem;
-            margin-top: 1.5rem;
+            margin: 1rem 0 1.5rem;
         }
 
         .dot {
-            width: 12px;
-            height: 12px;
+            width: 10px;
+            height: 10px;
             border-radius: 50%;
-            background: rgba(255,255,255,0.4);
+            background: rgba(44, 62, 80, 0.3);
             cursor: pointer;
             transition: all 0.3s;
         }
 
         .dot.active {
-            background: white;
-            width: 30px;
-            border-radius: 6px;
+            background: #2c3e50;
+            width: 25px;
+            border-radius: 5px;
         }
 
         /* CTA Button */
         .cta-button {
             display: inline-block;
-            background: white;
-            color: #667eea;
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
+            background: #2c3e50;
+            color: white;
+            padding: 0.9rem 2.5rem;
+            border-radius: 5px;
             text-decoration: none;
-            font-weight: 600;
-            margin-top: 1rem;
-            transition: transform 0.3s, box-shadow 0.3s;
+            font-weight: 500;
+            letter-spacing: 1px;
+            transition: all 0.3s;
         }
 
         .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(255,255,255,0.3);
+            background: #34495e;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
         /* Main Content */
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 4rem 2rem;
+            padding: 3rem 2rem;
         }
 
         section {
-            margin-bottom: 4rem;
+            margin-bottom: 3rem;
         }
 
         h2 {
-            color: #667eea;
-            font-size: 2rem;
+            color: #2c3e50;
+            font-size: 1.8rem;
             margin-bottom: 2rem;
             text-align: center;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
 
         /* Services Grid */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            gap: 1.5rem;
+            margin-top: 2rem;
         }
 
         .service-card {
             background: white;
             padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: 8px;
+            border: 1px solid #ecf0f1;
+            transition: all 0.3s;
         }
 
         .service-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-color: #bdc3c7;
         }
 
         .service-card h3 {
-            color: #764ba2;
+            color: #2c3e50;
             margin-bottom: 1rem;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
+            font-weight: 500;
         }
 
         .service-card p {
-            color: #666;
+            color: #7f8c8d;
+            line-height: 1.7;
         }
 
         /* About Section */
         .about-content {
-            background: white;
-            padding: 3rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            background: #f8f9fa;
+            padding: 2.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #2c3e50;
             line-height: 1.8;
         }
 
@@ -240,38 +248,44 @@
             color: #555;
         }
 
+        .about-content p strong {
+            color: #2c3e50;
+        }
+
         /* Contact Section */
         .contact-info {
             background: white;
-            padding: 3rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            padding: 2.5rem;
+            border-radius: 8px;
+            border: 1px solid #ecf0f1;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            gap: 1.5rem;
         }
 
         .contact-item {
             padding: 1.5rem;
-            border-left: 4px solid #667eea;
             background: #f8f9fa;
-            border-radius: 8px;
+            border-radius: 5px;
+            border-left: 3px solid #2c3e50;
         }
 
         .contact-item h3 {
-            color: #764ba2;
+            color: #2c3e50;
             margin-bottom: 0.5rem;
             font-size: 1.1rem;
+            font-weight: 500;
         }
 
         .contact-item p {
             color: #555;
-            font-size: 1rem;
+            font-size: 0.95rem;
         }
 
         .contact-item a {
-            color: #667eea;
+            color: #2c3e50;
             text-decoration: none;
+            font-weight: 500;
         }
 
         .contact-item a:hover {
@@ -284,11 +298,12 @@
             color: white;
             text-align: center;
             padding: 2rem;
-            margin-top: 4rem;
+            margin-top: 3rem;
         }
 
         footer p {
-            opacity: 0.8;
+            opacity: 0.9;
+            font-size: 0.9rem;
         }
 
         /* Social Links */
@@ -303,13 +318,13 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 50px;
-            height: 50px;
+            width: 45px;
+            height: 45px;
             background: rgba(255,255,255,0.1);
             border-radius: 50%;
             color: white;
             text-decoration: none;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             transition: all 0.3s;
         }
 
@@ -338,7 +353,7 @@
             }
 
             .hero .subtitle {
-                font-size: 1rem;
+                font-size: 0.9rem;
             }
 
             h2 {
@@ -350,14 +365,29 @@
             }
 
             .slide img {
-                max-height: 300px;
+                max-height: 280px;
             }
         }
 
         /* Icon Styling */
         .icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .icon svg {
+            width: 60px;
+            height: 60px;
+            stroke: #2c3e50;
+            fill: none;
+            stroke-width: 1.5;
+            transition: all 0.3s;
+        }
+
+        .service-card:hover .icon svg {
+            stroke: #7f8c8d;
+            transform: scale(1.1);
         }
 
         /* Smooth Scroll */
@@ -369,7 +399,7 @@
 <body>
     <header>
         <nav>
-            <div class="logo-text">Manufaktura Ortodoncji</div>
+            <div class="logo-text">MANUFAKTURA ORTODONCJI</div>
             <ul>
                 <li><a href="#home">Strona główna</a></li>
                 <li><a href="#uslugi">Usługi</a></li>
@@ -384,7 +414,7 @@
             <div class="logo-container">
                 <img src="logo.jpeg" alt="Manufaktura Ortodoncji Logo">
             </div>
-            <h1>Manufaktura Ortodoncji</h1>
+            <h1>MANUFAKTURA ORTODONCJI</h1>
             <p class="subtitle">Pracownia Ortodontyczna - Profesjonalna obsługa gabinetów stomatologicznych</p>
             
             <!-- Image Slider -->
@@ -405,7 +435,7 @@
             <!-- Slider Dots -->
             <div class="slider-dots" id="sliderDots"></div>
 
-            <a href="#kontakt" class="cta-button">Skontaktuj się z nami</a>
+            <a href="#kontakt" class="cta-button">SKONTAKTUJ SIĘ</a>
         </div>
     </section>
 
@@ -414,22 +444,49 @@
             <h2>Nasze Usługi</h2>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="icon">🦷</div>
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z"/>
+                            <circle cx="8" cy="10" r="1.5"/>
+                            <circle cx="16" cy="10" r="1.5"/>
+                            <path d="M7 15c0 2.8 2.2 5 5 5s5-2.2 5-5"/>
+                            <line x1="4" y1="12" x2="20" y2="12"/>
+                            <line x1="4" y1="14" x2="20" y2="14"/>
+                        </svg>
+                    </div>
                     <h3>Aparaty Ortodontyczne</h3>
                     <p>Produkcja aparatów ortodontycznych wykonanych z najwyższej jakości materiałów, dostosowanych indywidualnie do potrzeb każdego pacjenta.</p>
                 </div>
                 <div class="service-card">
-                    <div class="icon">✨</div>
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                            <circle cx="12" cy="12" r="2"/>
+                        </svg>
+                    </div>
                     <h3>Aparaty Ruchome</h3>
                     <p>Specjalistyczne aparaty ruchome zaprojektowane z precyzją, zapewniające komfort i skuteczność leczenia ortodontycznego.</p>
                 </div>
                 <div class="service-card">
-                    <div class="icon">🔬</div>
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                            <path d="M8 12h8"/>
+                            <circle cx="12" cy="12" r="3"/>
+                        </svg>
+                    </div>
                     <h3>Retencje</h3>
                     <p>Profesjonalne wykonanie retencji ortodontycznych, które zabezpieczają efekty leczenia i zapewniają długotrwałe rezultaty.</p>
                 </div>
                 <div class="service-card">
-                    <div class="icon">⚡</div>
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                        </svg>
+                    </div>
                     <h3>Szybka Realizacja</h3>
                     <p>Gwarantujemy szybki czas realizacji zamówień przy zachowaniu najwyższych standardów jakości wykonania.</p>
                 </div>
@@ -496,12 +553,12 @@
     <footer>
         <div class="social-links">
             <a href="https://www.instagram.com/manufaktura_ortodoncji/" target="_blank" rel="noopener noreferrer" class="social-link instagram" title="Instagram">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                 </svg>
             </a>
             <a href="https://www.tiktok.com/@manufaktura_ortod" target="_blank" rel="noopener noreferrer" class="social-link tiktok" title="TikTok">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
                 </svg>
             </a>
@@ -565,9 +622,9 @@
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
             if (window.scrollY > 50) {
-                header.style.background = 'linear-gradient(135deg, #5568d3 0%, #663d8f 100%)';
+                header.style.background = '#1a252f';
             } else {
-                header.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+                header.style.background = '#2c3e50';
             }
         });
     </script>
