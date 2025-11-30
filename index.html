@@ -283,44 +283,98 @@
             color: #2c3e50;
         }
 
-        /* Contact Section */
+        /* Contact Section - Stile Orto-Landia */
         .contact-info {
             background: white;
-            padding: 2.5rem;
-            border-radius: 8px;
-            border: 1px solid #ecf0f1;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
+            padding: 3rem 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
         .contact-item {
-            padding: 1.5rem;
-            background: #f8f9fa;
-            border-radius: 5px;
-            border-left: 3px solid #2c3e50;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            padding: 0;
+            background: transparent;
+            border: none;
+            border-radius: 0;
         }
 
-        .contact-item h3 {
+        .contact-icon {
+            width: 80px;
+            height: 80px;
+            min-width: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+        }
+
+        .contact-icon svg {
+            width: 70px;
+            height: 70px;
+            fill: #e74c3c;
+        }
+
+        .contact-text {
+            flex: 1;
+        }
+
+        .contact-text h3 {
+            display: none;
+        }
+
+        .contact-text p {
+            font-size: 1.3rem;
+            font-weight: 700;
             color: #2c3e50;
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-            font-weight: 500;
+            line-height: 1.4;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
-        .contact-item p {
-            color: #555;
-            font-size: 0.95rem;
-        }
-
-        .contact-item a {
+        .contact-text a {
             color: #2c3e50;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 700;
+            display: block;
         }
 
-        .contact-item a:hover {
-            text-decoration: underline;
+        .contact-text a:hover {
+            color: #e74c3c;
+        }
+
+        .social-contact {
+            display: flex;
+            gap: 3rem;
+            justify-content: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 3px solid #ecf0f1;
+        }
+
+        .social-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .social-contact-item svg {
+            width: 60px;
+            height: 60px;
+            fill: #e74c3c;
+        }
+
+        .social-contact-item span {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #2c3e50;
+            text-transform: uppercase;
         }
 
         /* Footer */
@@ -397,6 +451,31 @@
 
             .slide img {
                 max-height: 280px;
+            }
+
+            .contact-item {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+
+            .contact-icon svg {
+                width: 60px;
+                height: 60px;
+            }
+
+            .contact-text p {
+                font-size: 1.1rem;
+            }
+
+            .social-contact {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .social-contact-item {
+                flex-direction: column;
+                text-align: center;
             }
         }
 
@@ -563,31 +642,67 @@
             <h2>Kontakt</h2>
             <div class="contact-info">
                 <div class="contact-item">
-                    <h3>📍 Adres</h3>
-                    <p>Krakowska 214<br>43-512 Bestwina</p>
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                    </div>
+                    <div class="contact-text">
+                        <p>UL. KRAKOWSKA 214<br>43-512 BESTWINA</p>
+                    </div>
                 </div>
+
                 <div class="contact-item">
-                    <h3>📞 Telefon</h3>
-                    <p><a href="tel:886116389">886 116 389</a><br>
-                    <a href="tel:514663808">514 663 808</a></p>
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                    </div>
+                    <div class="contact-text">
+                        <p>
+                            <a href="tel:886116389">TEL. 886 116 389</a>
+                            <a href="tel:514663808">514 663 808</a>
+                        </p>
+                    </div>
                 </div>
+
                 <div class="contact-item">
-                    <h3>🏢 Dane firmy</h3>
-                    <p>Sylwia Jurasz<br>
-                    NIP: 6521758837<br>
-                    REGON: 542399436</p>
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                    </div>
+                    <div class="contact-text">
+                        <p>KONTAKT@MANUFAKTURA-ORTODONCJI.PL</p>
+                    </div>
                 </div>
+
                 <div class="contact-item">
-                    <h3>🕐 Godziny pracy</h3>
-                    <p>Poniedziałek - Piątek<br>
-                    8:00 - 16:00</p>
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/>
+                            <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                        </svg>
+                    </div>
+                    <div class="contact-text">
+                        <p>PONIEDZIAŁEK - PIĄTEK<br>8:00 - 16:00</p>
+                    </div>
                 </div>
-                <div class="contact-item">
-                    <h3>📱 Social Media</h3>
-                    <p>
-                        <a href="https://www.instagram.com/manufaktura_ortodoncji/" target="_blank" rel="noopener noreferrer">Instagram</a><br>
-                        <a href="https://www.tiktok.com/@manufaktura_ortod" target="_blank" rel="noopener noreferrer">TikTok</a>
-                    </p>
+
+                <div class="social-contact">
+                    <a href="https://www.instagram.com/manufaktura_ortodoncji/" target="_blank" rel="noopener noreferrer" class="social-contact-item">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                        <span>@manufaktura_ortodoncji</span>
+                    </a>
+
+                    <a href="https://www.tiktok.com/@manufaktura_ortod" target="_blank" rel="noopener noreferrer" class="social-contact-item">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                        </svg>
+                        <span>@manufaktura_ortod</span>
+                    </a>
                 </div>
             </div>
         </section>
