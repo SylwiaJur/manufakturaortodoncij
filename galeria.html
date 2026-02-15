@@ -13,9 +13,8 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            background-color: #f8f9fa;
             color: #2c3e50;
-            background-color: #ffffff;
         }
 
         /* Header & Navigation */
@@ -23,10 +22,6 @@
             background: #2c3e50;
             color: white;
             padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
@@ -88,43 +83,44 @@
         .container {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 6rem 2rem 4rem;
+            padding: 3rem 2rem;
         }
 
         h1 {
-            color: #2c3e50;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
             text-align: center;
+            color: #2c3e50;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
             font-weight: 300;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
             text-transform: uppercase;
         }
 
         /* Gallery Grid */
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
         }
 
         .gallery-item {
-            background: white;
-            border-radius: 10px;
+            position: relative;
             overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             transition: transform 0.3s, box-shadow 0.3s;
+            background: white;
             cursor: pointer;
         }
 
         .gallery-item:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
 
         .gallery-item img {
             width: 100%;
-            height: 350px;
+            height: 300px;
             object-fit: cover;
             display: block;
         }
@@ -138,10 +134,9 @@
             width: 100%;
             height: 100%;
             background: rgba(0,0,0,0.95);
-            z-index: 2000;
+            z-index: 9999;
             align-items: center;
             justify-content: center;
-            padding: 2rem;
         }
 
         .lightbox.active {
@@ -149,70 +144,56 @@
         }
 
         .lightbox-content {
+            position: relative;
             max-width: 90%;
             max-height: 90%;
-            position: relative;
         }
 
-        .lightbox-content img {
-            max-width: 100%;
+        .lightbox img {
+            max-width: 90vw;
             max-height: 90vh;
             object-fit: contain;
-            border-radius: 10px;
+            border-radius: 8px;
         }
 
         .lightbox-close {
             position: absolute;
-            top: -40px;
-            right: 0;
-            background: white;
-            color: #2c3e50;
-            border: none;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            font-size: 1.5rem;
+            top: 20px;
+            right: 40px;
+            color: white;
+            font-size: 50px;
             cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s;
+            z-index: 10000;
+            font-weight: 300;
+            transition: opacity 0.3s;
         }
 
         .lightbox-close:hover {
-            background: #e74c3c;
-            color: white;
+            opacity: 0.7;
         }
 
         .lightbox-nav {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            background: white;
-            color: #2c3e50;
-            border: none;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            font-size: 1.5rem;
+            color: white;
+            font-size: 60px;
             cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s;
+            padding: 1rem;
+            user-select: none;
+            transition: opacity 0.3s;
         }
 
         .lightbox-nav:hover {
-            background: #e74c3c;
-            color: white;
+            opacity: 0.7;
         }
 
         .lightbox-prev {
-            left: -70px;
+            left: 20px;
         }
 
         .lightbox-next {
-            right: -70px;
+            right: 20px;
         }
 
         /* Footer */
@@ -236,25 +217,28 @@
                 gap: 1rem;
             }
 
-            h1 {
-                font-size: 2rem;
-            }
-
             .gallery-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 1rem;
             }
 
-            .lightbox-prev {
-                left: 10px;
+            .gallery-item img {
+                height: 250px;
             }
 
-            .lightbox-next {
-                right: 10px;
+            h1 {
+                font-size: 1.8rem;
             }
-        }
 
-        html {
-            scroll-behavior: smooth;
+            .lightbox-close {
+                top: 10px;
+                right: 20px;
+                font-size: 40px;
+            }
+
+            .lightbox-nav {
+                font-size: 40px;
+            }
         }
     </style>
 </head>
@@ -279,46 +263,87 @@
 
     <div class="container">
         <h1>Galeria Naszych Prac</h1>
-        
         <div class="gallery-grid">
             <div class="gallery-item" onclick="openLightbox(0)">
-                <img src="image00001.jpeg" alt="Aparat ortodontyczny 1">
+                <img src="image00008.jpeg" alt="Manufaktura Ortodoncji - Praca 1">
             </div>
             <div class="gallery-item" onclick="openLightbox(1)">
-                <img src="image00002.jpeg" alt="Aparat ortodontyczny 2">
+                <img src="image00010.jpeg" alt="Manufaktura Ortodoncji - Praca 2">
             </div>
             <div class="gallery-item" onclick="openLightbox(2)">
-                <img src="image00003.jpeg" alt="Aparat ortodontyczny 3">
+                <img src="image00011.jpeg" alt="Manufaktura Ortodoncji - Praca 3">
             </div>
             <div class="gallery-item" onclick="openLightbox(3)">
-                <img src="image00004.jpeg" alt="Aparat ortodontyczny 4">
+                <img src="image00012.jpeg" alt="Manufaktura Ortodoncji - Praca 4">
             </div>
             <div class="gallery-item" onclick="openLightbox(4)">
-                <img src="image00005.jpeg" alt="Aparat ortodontyczny 5">
+                <img src="image00013.jpeg" alt="Manufaktura Ortodoncji - Praca 5">
             </div>
             <div class="gallery-item" onclick="openLightbox(5)">
-                <img src="image00006.jpeg" alt="Aparat ortodontyczny 6">
+                <img src="image00014.jpeg" alt="Manufaktura Ortodoncji - Praca 6">
             </div>
             <div class="gallery-item" onclick="openLightbox(6)">
-                <img src="image00007.jpeg" alt="Aparat ortodontyczny 7">
+                <img src="image00015.jpeg" alt="Manufaktura Ortodoncji - Praca 7">
             </div>
             <div class="gallery-item" onclick="openLightbox(7)">
-                <img src="image00008.jpeg" alt="Aparat ortodontyczny 8">
+                <img src="image00016.jpeg" alt="Manufaktura Ortodoncji - Praca 8">
             </div>
             <div class="gallery-item" onclick="openLightbox(8)">
-                <img src="image00009.jpeg" alt="Aparat ortodontyczny 9">
+                <img src="image00017.jpeg" alt="Manufaktura Ortodoncji - Praca 9">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(9)">
+                <img src="image00018.jpeg" alt="Manufaktura Ortodoncji - Praca 10">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(10)">
+                <img src="image00019.jpeg" alt="Manufaktura Ortodoncji - Praca 11">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(11)">
+                <img src="image00020.jpeg" alt="Manufaktura Ortodoncji - Praca 12">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(12)">
+                <img src="image00021.jpeg" alt="Manufaktura Ortodoncji - Praca 13">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(13)">
+                <img src="image00022.jpeg" alt="Manufaktura Ortodoncji - Praca 14">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(14)">
+                <img src="image00023.jpeg" alt="Manufaktura Ortodoncji - Praca 15">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(15)">
+                <img src="image00024.jpeg" alt="Manufaktura Ortodoncji - Praca 16">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(16)">
+                <img src="image00025.jpeg" alt="Manufaktura Ortodoncji - Praca 17">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(17)">
+                <img src="image00026.jpeg" alt="Manufaktura Ortodoncji - Praca 18">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(18)">
+                <img src="image00027.jpeg" alt="Manufaktura Ortodoncji - Praca 19">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(19)">
+                <img src="image00028.jpeg" alt="Manufaktura Ortodoncji - Praca 20">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(20)">
+                <img src="image00029.jpeg" alt="Manufaktura Ortodoncji - Praca 21">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(21)">
+                <img src="image00030.jpeg" alt="Manufaktura Ortodoncji - Praca 22">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(22)">
+                <img src="image00031.jpeg" alt="Manufaktura Ortodoncji - Praca 23">
             </div>
         </div>
     </div>
 
     <!-- Lightbox -->
-    <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <span class="lightbox-nav lightbox-prev" onclick="event.stopPropagation(); changeImage(-1)">&#8249;</span>
         <div class="lightbox-content">
-            <button class="lightbox-close" onclick="closeLightbox(event)">&times;</button>
-            <button class="lightbox-nav lightbox-prev" onclick="changeImage(-1, event)">&#10094;</button>
-            <img id="lightbox-img" src="" alt="Powiększone zdjęcie">
-            <button class="lightbox-nav lightbox-next" onclick="changeImage(1, event)">&#10095;</button>
+            <img id="lightbox-img" src="" alt="Zdjęcie powiększone">
         </div>
+        <span class="lightbox-nav lightbox-next" onclick="event.stopPropagation(); changeImage(1)">&#8250;</span>
     </div>
 
     <footer>
@@ -328,68 +353,65 @@
 
     <script>
         const images = [
-            'image00001.jpeg',
-            'image00002.jpeg',
-            'image00003.jpeg',
-            'image00004.jpeg',
-            'image00005.jpeg',
-            'image00006.jpeg',
-            'image00007.jpeg',
             'image00008.jpeg',
-            'image00009.jpeg'
+            'image00010.jpeg',
+            'image00011.jpeg',
+            'image00012.jpeg',
+            'image00013.jpeg',
+            'image00014.jpeg',
+            'image00015.jpeg',
+            'image00016.jpeg',
+            'image00017.jpeg',
+            'image00018.jpeg',
+            'image00019.jpeg',
+            'image00020.jpeg',
+            'image00021.jpeg',
+            'image00022.jpeg',
+            'image00023.jpeg',
+            'image00024.jpeg',
+            'image00025.jpeg',
+            'image00026.jpeg',
+            'image00027.jpeg',
+            'image00028.jpeg',
+            'image00029.jpeg',
+            'image00030.jpeg',
+            'image00031.jpeg'
         ];
 
         let currentImageIndex = 0;
 
         function openLightbox(index) {
             currentImageIndex = index;
-            const lightbox = document.getElementById('lightbox');
-            const img = document.getElementById('lightbox-img');
-            img.src = images[index];
-            lightbox.classList.add('active');
-            document.body.style.overflow = 'hidden';
+            document.getElementById('lightbox').classList.add('active');
+            document.getElementById('lightbox-img').src = images[currentImageIndex];
         }
 
-        function closeLightbox(event) {
-            if (event.target === document.getElementById('lightbox') || 
-                event.target.classList.contains('lightbox-close')) {
-                const lightbox = document.getElementById('lightbox');
-                lightbox.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            }
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
         }
 
-        function changeImage(direction, event) {
-            event.stopPropagation();
+        function changeImage(direction) {
             currentImageIndex += direction;
             
+            // Loop around
             if (currentImageIndex < 0) {
                 currentImageIndex = images.length - 1;
             } else if (currentImageIndex >= images.length) {
                 currentImageIndex = 0;
             }
             
-            const img = document.getElementById('lightbox-img');
-            img.src = images[currentImageIndex];
+            document.getElementById('lightbox-img').src = images[currentImageIndex];
         }
 
-        // Chiudi lightbox con ESC
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                const lightbox = document.getElementById('lightbox');
-                lightbox.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            }
-        });
-
-        // Naviga con frecce
-        document.addEventListener('keydown', function(event) {
-            const lightbox = document.getElementById('lightbox');
-            if (lightbox.classList.contains('active')) {
-                if (event.key === 'ArrowLeft') {
-                    changeImage(-1, event);
-                } else if (event.key === 'ArrowRight') {
-                    changeImage(1, event);
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (document.getElementById('lightbox').classList.contains('active')) {
+                if (e.key === 'Escape') {
+                    closeLightbox();
+                } else if (e.key === 'ArrowLeft') {
+                    changeImage(-1);
+                } else if (e.key === 'ArrowRight') {
+                    changeImage(1);
                 }
             }
         });
